@@ -1,7 +1,7 @@
 import { useLayoutEffect, useRef, Suspense } from "react";
 import { useFrame, Canvas } from "@react-three/fiber";
 import { OrbitControls, useGLTF } from "@react-three/drei";
-
+import { useThree } from "@react-three/fiber";
 const Phones = () => {
   const phone = useGLTF(
     "https://cdn.rawgit.com/imamaffandi/Gorify/main/public/phonemesh.gltf"
@@ -24,6 +24,7 @@ const Phones = () => {
     boxRef.current.rotation.y = rotateY;
   });
 
+  const { viewport } = useThree();
   return (
     <mesh ref={boxRef}>
       <hemisphereLight intensity={0.15} groundColor={"black"} />
@@ -31,6 +32,7 @@ const Phones = () => {
       <pointLight intensity={10} position={[0, 0, 3]} />
       <pointLight intensity={10} position={[0, 0, 1]} />
       <pointLight intensity={10} position={[0, 0, -1]} />
+      scale={viewport.width / 5}
       <primitive object={phone.scene} />
     </mesh>
   );
@@ -55,7 +57,7 @@ function PhoneCanvas() {
             maxPolarAngle={Math.PI / 2}
             minPolarAngle={Math.PI / 2}
           />
-          <group ref={groupRef} position={[2, 0, 0]}>
+          <group ref={groupRef}>
             <Phones />
           </group>
         </Suspense>
