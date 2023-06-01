@@ -22,17 +22,17 @@ const App = () => {
           className="absolute top-52 left-10 sm:inset-48 text-center w-0 z-10"
         >
           <motion.li key={[0]} variants={item}>
-            <h1 className="font-black text-5xl sm:text-8xl leading-[40px] sm:leading-[80px]">
+            <h1 className="font-black text-6xl sm:text-8xl leading-[50px] sm:leading-[80px]">
               SEDIA
             </h1>
           </motion.li>
           <motion.li key={[1]} variants={item}>
-            <h1 className="font-black text-5xl sm:text-8xl leading-[40px] sm:leading-[80px]">
+            <h1 className="font-black text-6xl sm:text-8xl leading-[50px] sm:leading-[80px]">
               SETIAP
             </h1>
           </motion.li>
           <motion.li key={[2]} variants={item}>
-            <h1 className="font-black text-5xl sm:text-8xl leading-[40px] sm:leading-[80px]">
+            <h1 className="font-black text-6xl sm:text-8xl leading-[50px] sm:leading-[80px]">
               SAAT
             </h1>
           </motion.li>
@@ -49,8 +49,8 @@ const App = () => {
       </header>
       {/* About Section */}
       <section
+        className="h-[50vh] sm:h-screen relative grid place-items-center p-10"
         id="section"
-        className="h-[100vh] relative grid place-items-center p-10"
       >
         <motion.div
           initial={{ y: -100, scale: 0.5 }}
@@ -72,17 +72,17 @@ const App = () => {
         </motion.div>
       </section>
       {/* Service Section */}
-      <section className="h-[100vh] flex flex-col sm:flex-row p-10 sm:justify-around text-start sm:p-20">
+      <section className="h-[50vh] sm:h-screen flex flex-col sm:flex-row  sm:justify-evenly">
         <motion.div
           initial={{ x: -100 }}
           whileInView={{ x: 0 }}
           transition={{ delay: 0.1 }}
-          className="sm:py-28 p-3"
+          className="sm:py-28 p-3 p"
         >
-          <h3 className="text-3xl text-center  sm:text-left text-secondary font-black">
+          <h3 className="text-3xl text-end  sm:text-left text-secondary font-black">
             Layanan 24 jam
           </h3>
-          <p className="text-center max-w-sm sm:text-left">
+          <p className="text-end max-w-sm sm:text-left">
             Dengan antarmuka yang ramah pengguna dan tim ahli siap membantu
             anda, Gorify memudahkan Anda untuk mendapatkan manfaat maksimal dari
             telepon Anda.
@@ -97,12 +97,12 @@ const App = () => {
           <img
             src={phone}
             alt="phone"
-            className="w-60 h-60 object-cover rounded-xl shadow-sm"
+            className="w-60 h-60 object-cover rounded-xl shadow-sm "
           />
         </motion.div>
       </section>
       {/* Service Section */}
-      <section className="h-[100vh] flex flex-col sm:flex-row sm:justify-evenly text-center sm:text-start p-10 sm:p-20">
+      <section className="h-[50vh] sm:h-screen flex flex-col sm:flex-row sm:justify-evenly ">
         <motion.div
           initial={{ x: -100 }}
           whileInView={{ x: 0 }}
@@ -131,7 +131,7 @@ const App = () => {
         </motion.div>
       </section>
       {/* Footer / Contact Section */}
-      <section className="h-[50px] sm:h-[100vh] flex flex-col sm:flex-row  justify-between  sm:items-baseline pt-20">
+      <section className="h-[50vh] sm:h-screen flex flex-col sm:flex-row  justify-between  sm:items-baseline m-20 sm:m-0 sm:p-20">
         <div className=" flex flex-row items-center p-20 ">
           <img
             src={logo}
@@ -147,13 +147,9 @@ const App = () => {
             <h1 className="text-5xl text-center sm:text-start text-secondary font-black">
               Hubungi Kami
             </h1>
-            <p className="text-center sm:text-start">081230677319</p>
-            <p className="text-center sm:text-start">
-              Jl.Darmo Ngaliman Kota Batu
-            </p>
-            <p className="text-center sm:text-start">
-              imamaffandi715@gmail.com
-            </p>
+            <p className="text-center sm:text-start">000-000-00-000</p>
+            <p className="text-center sm:text-start">Jl. Merpati</p>
+            <p className="text-center sm:text-start">loremipsum@gmail.com</p>
           </div>
         </div>
       </section>
