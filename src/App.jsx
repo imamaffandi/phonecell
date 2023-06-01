@@ -97,7 +97,7 @@ const App = () => {
           <img
             src={phone}
             alt="phone"
-            className="w-60 h-60 object-cover rounded-xl shadow-sm "
+            className="w-screen sm:w-60 h-60 object-cover rounded-xl shadow-sm "
           />
         </motion.div>
       </section>
@@ -111,7 +111,7 @@ const App = () => {
           <img
             src={laptop}
             alt="laptop"
-            className="w-60 h-60 object-cover rounded-xl shadow-sm"
+            className="w-screen sm:w-60 h-60 object-cover rounded-xl shadow-sm"
           />
         </motion.div>
         <motion.div
