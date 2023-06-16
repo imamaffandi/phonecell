@@ -3,9 +3,7 @@ import { useFrame, Canvas } from "@react-three/fiber";
 import { OrbitControls, useGLTF } from "@react-three/drei";
 import { useThree } from "@react-three/fiber";
 const Phones = () => {
-  const phone = useGLTF(
-    "https://cdn.rawgit.com/imamaffandi/Gorify/main/public/phonemesh.gltf"
-  );
+  const phone = useGLTF("/phone/phonemesh.gltf");
   const boxRef = useRef();
   useLayoutEffect(() => {
     boxRef.current.geometry.computeBoundingBox();
